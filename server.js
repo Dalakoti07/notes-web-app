@@ -4,7 +4,7 @@ const articleRouter= require('./routes/article')
 const mongoose= require('mongoose') 
 const Article= require('./models/article')
 
-mongoose.connect('mongodb://localhost/notes',{ useNewUrlParser: true,useUnifiedTopology: true })
+mongoose.connect('mongodb://localhost/notes',{ useNewUrlParser: true,useUnifiedTopology: true ,useCreateIndex:true})
         .then(()=>{},(error)=>console.log("Error in connecting with db "+error))
 
 app.set('view engine','ejs');
